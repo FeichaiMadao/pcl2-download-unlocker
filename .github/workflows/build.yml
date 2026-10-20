@@ -1,0 +1,30 @@
+name: build
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build (csc / .NET Framework)
+        shell: cmd
+        run: build.cmd
+
+      - name: Print artifact hash
+        shell: pwsh
+        run: |
+          Get-Item dist/PclUnlockPatcher.exe | Select-Object Name, Length
+          Get-FileHash dist/PclUnlockPatcher.exe -Algorithm SHA256
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: PclUnlockPatcher
+          path: dist/PclUnlockPatcher.exe
+          if-no-files-found: error
