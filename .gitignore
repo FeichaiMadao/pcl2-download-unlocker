@@ -1,0 +1,23 @@
+# 构建产物
+dist/
+*.exe
+*.dll
+!lib/Mono.Cecil.dll
+obj/
+bin/
+
+# 备份与日志
+*.bak
+*.log
+*.error.log
+
+# 本地中间产物
+work/
+tmp/
+
+# 系统/编辑器
+.DS_Store
+Thumbs.db
+.vs/
+.vscode/
+*.user

@@ -1,0 +1,17 @@
+Third-party notices / 第三方组件与署名
+==========================================
+
+1) Mono.Cecil 0.11.5  (lib/Mono.Cecil.dll)
+   Copyright (c) 2008 - 2024 Jb Evain
+   Licensed under the MIT License.
+   来源：NuGet 包 mono.cecil 0.11.5 的 lib/net40/Mono.Cecil.dll，原样引入，未做修改。
+   用途：编译期作为资源内嵌进 PclUnlockPatcher.exe，运行时读取 .NET 程序集元数据。
+
+2) Plain Craft Launcher 2 (PCL2)
+   https://github.com/Meloong-Git/PCL
+   本项目与其作者及团队无任何隶属或合作关系，项目名仅用于说明适用对象。
+   本项目仅在运行时读取用户本地已获得的启动器文件以定位补丁点，使用类型名/方法名
+   以及一段面向用户的限制提示文案作为特征锚点，属于《PCL 存储库合理使用指南》
+   所述"轻度使用"，在此给出署名。
+   本仓库不包含、也不分发 PCL 的任何二进制文件或其修改版本。
+   请遵守 PCL 的《PCL 分发有限许可》与上述指南，不要分发修改后的启动器。
